@@ -34,8 +34,22 @@
     100% { transform: translateY(-10vh); opacity: 0; }
   }
 </style>
+.play-btn {
+  background: white;
+  color: #ff4e50;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
 </head>
 <body>
+<button onclick="playMusic()" class="play-btn">▶ Toca para escuchar</button>
+
+<audio id="audio" src="musica.mp3"></audio>
 
 <div class="container">
   <h1>Para el amor de mi vida 💖</h1>
@@ -59,7 +73,9 @@
   }
   setInterval(createHeart, 300);
 </script>
-
+function playMusic() {
+  document.getElementById("audio").play();
+}
 </body>
 </html>
 
